@@ -1,0 +1,25 @@
+name: testing triggers
+run-name: ¡estoy probando los triggers!
+on:
+  push:
+    branches:
+      - 'aprendiendo**'
+  issue_comment:
+
+jobs:
+  run_js:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del Repositorio
+      - uses: actions/checkout@v4
+
+      # 2. Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Ejecutar el script JavaScript
+      - name: Execute JavaScript Script
+        run: node test.js
