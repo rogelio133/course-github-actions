@@ -5,7 +5,7 @@ on:
     branches:
       - 'aprendiendo**'
   issue_comment:
-
+  pull_request_review_comment:
 jobs:
   run_js:
     runs-on: ubuntu-latest
