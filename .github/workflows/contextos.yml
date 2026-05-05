@@ -12,6 +12,7 @@ jobs:
           echo "Rama: ${{ github.ref_name }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Actor: ${{ github.actor }}"
+          echo "Actor: ${{ github.ref_name }}"
   not-main:
     if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
